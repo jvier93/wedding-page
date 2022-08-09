@@ -1,0 +1,510 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/*Loader */
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hero {
+  background-image: linear-gradient(
+      to top,
+      rgba(251, 193, 234, 0.623) 0%,
+      rgba(166, 192, 238, 0.699) 100%
+    ),
+    url(../img/hero2.jpeg);
+  width: 100%;
+  height: 650px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.textos-hero {
+  height: 500px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textos-hero h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 80px;
+}
+
+.textos-hero p {
+  font-size: 25px;
+}
+
+.svg-hero {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.svg-hero {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/*Estilos generales */
+
+.contenedor,
+.wave-contenedor {
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: auto;
+  padding: 0 0 80px 0;
+}
+
+.contenedor {
+  padding: 60px 0;
+}
+
+.titulo {
+  font-weight: 300;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo.left {
+  text-align: left;
+}
+
+/* Section website */
+
+.website {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.website img {
+  width: 48%;
+}
+.website .contenedor-textos-main {
+  width: 40%;
+}
+
+.parrafo-cantico {
+  font-size: 25px;
+  text-align: justify;
+  margin-bottom: 20px;
+  font-style: oblique;
+}
+
+.parrafo {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/*Seccion cuenta atras*/
+.section-cuenta-atras {
+  background-image: linear-gradient(
+      to top,
+      rgba(251, 193, 234, 0.623) 0%,
+      rgba(166, 192, 238, 0.699) 100%
+    ),
+    url(../img/anillos.jpg);
+  width: 100%;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+/*Seccion eventos*/
+
+.cards {
+  background: #fff;
+}
+
+.content-cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(166, 192, 238, 0.699);
+  margin: 20px;
+  width: 40%;
+  text-align: center;
+  height: 350px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1);
+  transition: transform 0.6s;
+}
+
+.card:hover {
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1.03);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-family: "Dancing Script";
+  font-size: 30px;
+}
+
+.card i {
+  margin: 30px 0 20px 0;
+  color: #cc9199;
+  font-size: 50px;
+}
+
+.icono {
+  margin: 30px 0 20px 0;
+  width: 20%;
+  height: 20%;
+  color: rgb(70, 69, 69);
+}
+.card p {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/*Seccion regalos */
+
+.section-regalos {
+  background: rgb(243, 238, 238);
+  position: relative;
+  height: 450px;
+}
+
+.website-regalos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.icono-card {
+  margin: 30px 0 20px 0;
+  width: 20%;
+  height: 20%;
+  color: rgb(70, 69, 69);
+}
+
+.contenedor-numero-cuenta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenedor-numero-cuenta p {
+  margin-left: 10px;
+}
+/*Seccion enviar mensaje */
+
+footer {
+  background: rgb(166, 192, 238);
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 20px 10px;
+}
+
+.input::placeholder {
+  color: #fff;
+  font-family: "raleway", "sans-serif";
+}
+
+input[type="text"],
+input[type="email"] {
+  display: inline-block;
+  width: 49%;
+  margin-bottom: 30px;
+}
+
+.form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input[type="submit"] {
+  width: 120px;
+  text-align: center;
+  padding: 14px 0;
+}
+
+/*Seccion de la cuenta atras simplycountdown*/
+
+#cuenta-atras {
+  display: flex;
+  justify-content: center;
+}
+
+.simply-section {
+  text-align: center;
+  background: #fff;
+  width: 140px;
+  height: 140px;
+  margin: 0 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simply-amount {
+  font-family: "Open Sans", sans-serif;
+  display: block;
+  font-size: 50px;
+}
+.simply-word {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  /*Seccion hero */
+  .textos-hero h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .titulo {
+    font-size: 35px;
+  }
+
+  .titulo.left {
+    text-align: center;
+  }
+
+  /*Seccion website */
+  .website {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .website img {
+    width: 80%;
+  }
+
+  .website .contenedor-textos-main {
+    width: 100%;
+  }
+
+  /*Seccion eventos */
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  /*Seccion */
+  .section-regalos {
+    height: 470px;
+  }
+
+  .website-regalos {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .simply-section {
+    height: 80px;
+    width: 100px;
+    margin-bottom: 5px;
+  }
+
+  .simply-amount {
+    font-size: 40px;
+  }
+
+  .simply-word {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /*generales*/
+
+  .titulo {
+    font-size: 25px;
+  }
+
+  .parrafo {
+    font-size: 15px;
+  }
+
+  /*Seccion hero  */
+
+  .hero {
+    height: 600px;
+  }
+
+  .textos-hero h1 {
+    font-size: 44px;
+  }
+
+  .textos-hero p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /*Seccion cuenta atras */
+
+  .section-cuenta-atras {
+    height: 500px;
+  }
+
+  #cuenta-atras {
+    flex-wrap: wrap;
+  }
+
+  .simply-section {
+    height: 80px;
+    width: 100px;
+    margin-bottom: 5px;
+  }
+
+  .simply-amount {
+    font-size: 40px;
+  }
+
+  .simply-word {
+    font-size: 15px;
+  }
+
+  /*Seccion eventos */
+
+  .card {
+    height: 310px;
+  }
+
+  .card p {
+    font-size: 20px;
+  }
+}
+
+.loader {
+  background: rgb(166, 192, 238);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  clip-path: circle(150% at 100% 0);
+  transition: clip-path 1.3s ease-in-out;
+}
+
+.loader2 {
+  clip-path: circle(0% at 100% 100%);
+}
