@@ -1,5 +1,5 @@
 simplyCountdown("#cuenta-atras", {
-  year: 2021, // required
+  year: 2023, // required
   month: 4, // required
   day: 22, // required
   hours: 9, // Default is 0 [0-23] integer
